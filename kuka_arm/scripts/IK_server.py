@@ -195,7 +195,7 @@ def handle_calculate_IK(req):
 	    # Compensate for rotation discrepancy between DH parameters and Gazebo
             Rug  = (rot_z(pi)* rot_y(-pi/2)).T  # from URDF
             RugT = Rug.T
-            R0g_value = rot_z(yaw) * rot_y(pitch) * rot_x(roll)
+            R0u_value = rot_z(yaw) * rot_y(pitch) * rot_x(roll)
             R0g_eval  = R0u_value * RugT  # R0g = R0u*Rug
 
             gripper_point = px, py, pz
